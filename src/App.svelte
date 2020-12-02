@@ -100,7 +100,7 @@
           type="email"
           id="inputEmail"
           class="form-control"
-          placeholder="Email address"
+          placeholder="NIK"
           required=""
           autofocus="" />
         <input
