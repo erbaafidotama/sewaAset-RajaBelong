@@ -16,8 +16,6 @@
     //   return {};
     // });
   };
-
-  console.log(cartItems);
 </script>
 
 <style>

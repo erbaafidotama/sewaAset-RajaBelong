@@ -10,17 +10,15 @@
   const unsubscribe = cart.subscribe((items) => {
     cartItems = Object.values(items);
   });
-  // console.log(typeof cartItems);
-  console.log(typeof cartItems);
+  //
+
   for (let i = 0; i < cartItems.length; i++) {
-    console.log(cartItems[i]);
     const total_amount = {
       total_amount: cartItems[i].count * cartItems[i].price,
     };
     // cartItems[i].total_amount;
     Object.assign(cartItems[i], total_amount);
   }
-  console.log(cartItems);
 
   Array.prototype.sum = function (prop) {
     var total = 0;
@@ -29,8 +27,9 @@
     }
     return total;
   };
-  const all_total_amount = new Intl.NumberFormat(['ban', 'id']).format(cartItems.sum("total_amount"))
-  console.log(all_total_amount);
+  const all_total_amount = new Intl.NumberFormat(["ban", "id"]).format(
+    cartItems.sum("total_amount")
+  );
 </script>
 
 <style>
@@ -81,7 +80,13 @@
                   <tr>
                     <td>{item.name}</td>
                     <td>{item.count}</td>
-                    <td>Rp {new Intl.NumberFormat(['ban', 'id']).format(item.count * item.price)}</td>
+                    <td>
+                      Rp
+                      {new Intl.NumberFormat([
+                        'ban',
+                        'id',
+                      ]).format(item.count * item.price)}
+                    </td>
                   </tr>
                 {/each}
                 <tr>

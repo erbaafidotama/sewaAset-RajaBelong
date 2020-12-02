@@ -3,23 +3,23 @@
   export let item;
   let { name, price, img, count } = item;
 
-  const countButtonHandler = e => {
+  const countButtonHandler = (e) => {
     if (e.target.classList.contains("add")) {
       count++;
     } else if (count >= 1) {
       count--;
     }
-    cart.update(n => ({ ...n, [name]: { ...n[name], count } }));
+    cart.update((n) => ({ ...n, [name]: { ...n[name], count } }));
   };
 
   const removeItem = () => {
-    cart.update(n => {
+    cart.update((n) => {
       delete n[name];
       return n;
     });
   };
 
-  const priceConvert = new Intl.NumberFormat(['ban', 'id']).format(price)
+  const priceConvert = new Intl.NumberFormat(["ban", "id"]).format(price);
 </script>
 
 <style>
