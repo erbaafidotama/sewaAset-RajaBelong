@@ -45,9 +45,13 @@
   }
 </style>
 
-{#each cartItems as item (item.name)}
-  <CheckoutItem {item} />
-{/each}
+<div class="row">
+  {#each cartItems as item (item.name)}
+    <div class="col-6">
+      <CheckoutItem {item} />
+    </div>
+  {/each}
+</div>
 <body>
   <div class="container" id="invoice">
     <div class="row">

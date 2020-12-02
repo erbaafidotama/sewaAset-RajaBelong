@@ -67,9 +67,13 @@
       <p class="empty-message">Your cart is empty</p>
     {/if}
   {:else if cartItems.length > 0 && checkedOut === false}
-    {#each cartItems as item (item.name)}
-      <CheckoutItem {item} />
-    {/each}
+    <div class="row">
+      {#each cartItems as item (item.name)}
+        <div class="col-6">
+          <CheckoutItem {item} />
+        </div>
+      {/each}
+    </div>
     <button class="checkout" on:click={checkout}>Checkout</button>
   {/if}
 </div>

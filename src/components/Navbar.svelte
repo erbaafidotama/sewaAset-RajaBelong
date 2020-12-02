@@ -34,6 +34,7 @@
     top: 0;
     background: #008374;
     color: white;
+    z-index: 99;
   }
 
   ul > li:first-child {
