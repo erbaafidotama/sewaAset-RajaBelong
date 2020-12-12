@@ -1,4 +1,8 @@
-import { writable } from 'svelte/store'
+import { writable, get } from 'svelte/store'
 
 export const cart = writable({})
-export const loged = writable("f")
+export const pesan = writable({
+    pesan_tanggal: "",
+})
+
+export const getPesan = () => get(pesan)

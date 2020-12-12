@@ -1,5 +1,5 @@
 <script>
-  import { loged } from "./stores/stores.js";
+  // import { loged } from "./stores/stores.js";
 
   import CardWrapper from "./components/CardWrapper.svelte";
   import Navbar from "./components/Navbar.svelte";
@@ -16,11 +16,10 @@
   // const unsubscribe = loged.subscribe((items) => {
   //   login = Object.values(items);
   // });
-  // console.log(login);
+  //
 
   function log() {
     login = true;
-    console.log(login);
   }
 </script>
 

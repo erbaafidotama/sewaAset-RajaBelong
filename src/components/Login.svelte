@@ -1,9 +1,9 @@
 <script>
-  import { loged } from "../stores/stores.js";
+  // import { loged } from "../stores/stores.js";
 
-  function login() {
-    loged.update("t");
-  }
+  // function login() {
+  //   loged.update("t");
+  // }
 </script>
 
 <style>

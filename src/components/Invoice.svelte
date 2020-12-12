@@ -1,5 +1,8 @@
 <script>
-  import { cart } from "../stores/stores.js";
+  import { onMount } from "svelte";
+  import dayjs from "dayjs";
+
+  import { cart, pesan } from "../stores/stores.js";
   import CheckoutItem from "./CheckoutItem.svelte";
   function generateInvoice() {
     const element = document.getElementById("invoice");
@@ -30,6 +33,8 @@
   const all_total_amount = new Intl.NumberFormat(["ban", "id"]).format(
     cartItems.sum("total_amount")
   );
+
+  const thatDate = dayjs($pesan.pesan_tanggal).format("dddd[,] DD/MM/YYYY");
 </script>
 
 <style>
@@ -66,7 +71,7 @@
           <div class="col-md-12 text-right">
             <p><strong>Invoice No: </strong> 12345</p>
             <p><strong>Date:</strong> 15/Jan/2020</p>
-            <p>Rejang Belong</p>
+            <p>Rejang Lebong</p>
           </div>
         </div>
         <div class="row">
@@ -97,6 +102,11 @@
                   <td>&nbsp;</td>
                   <td><strong>Total</strong></td>
                   <td><strong>Rp {all_total_amount}</strong></td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td><strong>Tanggal Sewa</strong></td>
+                  <td><strong>{thatDate}</strong></td>
                 </tr>
               </tbody>
             </table>

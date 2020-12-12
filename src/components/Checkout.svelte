@@ -1,7 +1,9 @@
 <script>
+  import dayjs from "dayjs";
+  import Datepicker from "../components/datepicker/Index.svelte";
   import CheckoutItem from "./CheckoutItem.svelte";
   import Invoice from "./Invoice.svelte";
-  import { cart } from "../stores/stores.js";
+  import { cart, getPesan, pesan } from "../stores/stores.js";
 
   let checkedOut = false;
 
@@ -16,6 +18,13 @@
     //   return {};
     // });
   };
+
+  let dateFormat = "#{l}, #{j} / #{F} / #{Y}";
+
+  const oneYearFromNow = new Date();
+  oneYearFromNow.setFullYear(oneYearFromNow.getFullYear() + 1);
+
+  function selectedDate(e) {}
 </script>
 
 <style>
@@ -73,6 +82,15 @@
           <CheckoutItem {item} />
         </div>
       {/each}
+    </div>
+    <div>
+      <h5>Tanggal Pesan:</h5>
+      <!-- <Datepicker
+        on:dateSelected={selectedDate}
+        format={dateFormat}
+        start={new Date(2020, 9, 29)}
+        end={oneYearFromNow} /> -->
+      <input type="date" name="nascimento" bind:value={$pesan.pesan_tanggal} />
     </div>
     <button class="checkout" on:click={checkout}>Checkout</button>
   {/if}
