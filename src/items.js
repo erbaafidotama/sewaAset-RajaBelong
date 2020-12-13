@@ -1,8 +1,8 @@
 export default [
 	{
-		name: 'Kursi Lipat',
-		price: 10000,
-		img: 'kursi-lipat.jpg'
+		name: 'Tenda',
+		price: 150000,
+		img: 'tenda.jpg'
 	},
 	{
 		name: 'Ruang Serba Guna',

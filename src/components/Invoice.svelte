@@ -48,6 +48,13 @@
   .border {
     border: 1px solid #e5e5e5;
   }
+
+  .box-rek {
+    border: 2px solid red;
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 1em;
+  }
 </style>
 
 <div class="row">
@@ -112,6 +119,9 @@
             </table>
           </div>
         </div>
+        <div class="box-rek">Mohon Transfer ke No.Rek: <b>010202xxxx</b> a.n. <b>Pemda Rejang Lebong</b></div>
+        <br />
+        <br />
         <div class="row">
           <div class="col-md-11 text-right mt-2 mb-2">Signature</div>
         </div>
